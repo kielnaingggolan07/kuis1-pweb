@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <title>Kuis PWEB</title>
+</head>
+
+<body>
+    <main>
+        <form class="section-card" id="form" onsubmit="onSubmit()">
+            <div class="header">
+
+                <h3 style="text-align: center;"><strong>PEMERINTAH KABUPATEN SOLOK</strong></h3>
+                <h3 style="text-align: center;">
+                    <strong>RUMAH SAKIT UMUM DAERAH AROSUKA</strong>
+                </h3>
+                <h6 style="text-align: center;"><i>Jalan Raya Sobok Padang, KM 20 Arosuka Kode Pos 273645</i></h6>
+                <h6 style="text-align: center;"><u> <i>Provinsi Sumatera Barat Telp/Fax (0787) 18273  <strong><hr/></strong></i></u></h6>
+            </div>
+
+            <br> <br>
+            <h3 style="text-align: center;"><strong>FORMULIR PENDAFTARAN PASIEN BARU</strong></h3>
+            <br> <br>
+            <h5><u><strong>PERHATIAN: HARAP MENGISI FORMULIR DENGAN LENGKAP DAN JELAS</strong></u></h5>
+
+            <br>
+            <div class="part1">
+                <h5>I. IDENTITAS PASIEN</h5>
+                <section class="input">
+                    <!-- inputkan nama -->
+                    <label for="nama">NAMA PESIEN</label>
+                    <input type="text" name="nama-peserta" id="nama-peserta" required></input>
+
+                    <!-- inputkan tempat  lahir -->
+                    <label for="tl">TEMPAT LAHIR</label>
+                    <input type="text" name="ttl" id="ttl" required></input>
+
+                    <!-- INPUTKAN TANGGAL LAHIR -->
+                    <label for="tanggal-lahir">Tanggal Lahir</label>
+                    <input type="date" name="tanggal-lahir" id="tanggal-lahir" required></input>
+
+                    <!-- input JENIS KELAMIN -->
+                    <label for="jenis">JENIS KELAMIN</label>
+                    <select class="form-control" id="lomba" placeholder="Pilihan Lomba">
+                <option>1. LAKI-LAKI</option>
+                <option>2. PEREMPUAN</option>
+            </select>
+
+                    <!-- input ALAMAT -->
+                    <label for="alamat">ALAMAT</label>
+                    <input type="text" name="alamat" id="alamat" required></input>
+
+                    <label for="rw">RW</label>
+                    <input type="text" name="rw" id="rw" required></input>
+
+                    <label for="rt">RT</label>
+                    <input type="text" name="rt" id="rt" required></input>
+
+
+                    <!-- input PROVINSI -->
+                    <label for="provinsi">Provinsi</label>
+                    <select name="provinsi" id="provinsi" onchange="displayKabupaten()" required></select>
+
+
+                    <!-- input KABUPATEN -->
+                    <label for="kabupaten">Kabupaten</label>
+                    <select name="kabupaten" id="kabupaten" onchange="displayKecamatan()" required></select>
+
+                    <label for="kecamatan">Kecamatan</label>
+                    <select name="kecamatan" id="kecamatan" onchange="displayKelurahan()" required></select>
+
+                    <label for="kelurahan">Kelurahan</label>
+                    <select name="kelurahan" id="kelurahan" required></select>
+
+
+                    <!-- input NOMOR TELEPON -->
+                    <label for="notlpn">Nomor Telepon</label>
+                    <input type="number" name="no-tlpn" id="no-tlpn" required></input>
+
+                    <!-- input Kode pos -->
+                    <label for="kodepos">Kode Pos</label>
+                    <input type="number" name="kodepos" id="kodepos" required></input>
+
+
+                    <label for="agama">Agama</label>
+                    <select class="form-control" id="agama">
+                   <option>1. Islam</option>
+                   <option>2. Kristen</option>
+                 </select>
+
+
+
+            </div>
+
+            <br>
+            <div class="part2">
+                <h5><strong>II.PENANGGUNG JAWAB PASIEN</strong></h5>
+                <label for="hubungan">Hubungan Dengan Pasien</label>
+                <input type="text" name="hubungan" id="hubungan" required></input>
+
+                <label for="npj">Nama Penanggung Jawab</label>
+                <input type="text" name="npj" id="npj" required></input>
+
+                <label for="pend">Pendidikan Penanggung Jawab</label>
+                <input type="text" name="pend" id="pend" required></input>
+
+                <label for="ppj">Pekerjaan Penanggung Jawab</label>
+                <input type="text" name="ppj" id="ppj" required></input>
+
+            </div>
+
+            <section class="ttd" style="text-align: center; padding-top: 100px;">
+                <p>Tandan Tangan, <br>(...................................)
+                </p>
+            </section>
+
+            <button class="enter" style="margin-left: 46%; border-radius: 8px; background-color: aqua;">Daftar</button>
+        </form>
+    </main>
+</body>
+<script src="main.js"></script>
+
+</html>
